@@ -12,7 +12,7 @@ import org.json.simple.parser.ParseException;
 public class DB_Conn {
 
     //String connectionString = System.getProperty("mongodb.uri");
-    MongoClient client = MongoClients.create("mongodb+srv://testuser:vzftoQDZuAO4mxXX@cluster0.byrc8.mongodb.net/test");
+    MongoClient client = MongoClients.create("$MONGO_CONNECTION_STRING");
     MongoDatabase database = client.getDatabase("stageIndia");
 
     public JSONObject Person(String ID) throws ParseException {
